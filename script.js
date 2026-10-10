@@ -1,5 +1,4 @@
 
-<script>
 const contactForm = document.getElementById("contactform");
 
 contactForm.addEventListener("submit", async function (e) {
@@ -33,4 +32,3 @@ contactForm.addEventListener("submit", async function (e) {
         submitButton.textContent = "Submit";
     }
 });
-</script>
