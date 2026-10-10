@@ -522,7 +522,8 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
     justify-content: center;
     flex-basis: 100%;
 }
-.contactme{padding: 2rem;
+.contactme{
+    padding: .5rem;
     border-radius: 15px;
     background: var(--text);
     transition: all 0.3s ease;
