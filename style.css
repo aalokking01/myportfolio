@@ -164,9 +164,7 @@ body{
     font-style: normal;
     display: flex;
 }
-.font1{
-    font-family: "Cinzel", serif;
-}
+
 .btnsci{
     display: flex;
     align-items: center;
