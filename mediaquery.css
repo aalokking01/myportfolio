@@ -1,0 +1,176 @@
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+        font-size: 30px;
+        color: var(--text);
+
+    }
+    .profileimg{
+        margin-left: 30px;
+    }
+    .btnsci{
+        margin-top: 20px;
+        flex-direction: column;
+        
+    }
+    .skill-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .skills{
+        padding: 2rem;
+    }
+    .skillcard{
+        padding: 1rem;
+    }
+    .sci{
+        margin-top: 25px;
+    }
+    .devcard p{
+        max-width: 200px;
+    }
+    .aboutme{
+        padding-bottom: 5rem;
+        padding-top: 1rem;
+    }
+    .devprojectsgrid{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .home h2{
+        font-size: 25px;
+    }
+    .profileimg{
+        height: 300px;
+        width: 300px;
+    }
+    .homeinfo h1{
+        margin-top: 50px;
+        font-size: 50px;
+    }
+    .devcard{
+        padding: 1rem;
+    }
+    .contactme{
+        width: 400px;
+        padding: 1.5rem;
+    }
+    .contactform{
+        display: flex;
+        flex-direction: column;
+    }
+    .crgridcard h3{
+        font-size: 18px;
+    }
+    .navlinks{
+        display: none;
+    }
+    .crproject{
+        padding: 1rem 5%;
+    }
+    .crgridcard{
+        padding: 1rem;
+    }
+    .crgrid{
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+        font-size: 30px;
+        color: var(--text);
+
+    }
+    .navlinks{
+        display: none;
+        
+    }
+    .profileimg{
+     display: none;
+    }
+    .homeinfo h1{
+        font-size: 50px;
+    }
+    .homeinfo h2{
+        font-size: 25px;
+    }
+    .btnsci{
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .btn{
+        font-size: 15px;
+        margin-bottom: 25px;
+
+    }
+    .skills{
+        margin-top: 1rem;
+    }
+    .devprojects{
+        margin-top: 1rem;
+    }
+    .crproject{
+        margin-top: 1rem;
+    }
+    .aboutme{
+        margin-top: -5rem;
+    }
+
+
+}
+@media screen and (min-width:768px) and (max-width:960px) {
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+        font-size: 30px;
+        color: var(--text);
+
+    }
+    .navlinks{
+        display: none;
+        
+    }
+    .profileimg{
+        margin-left: 20px;
+    }
+    .homeinfo h2{
+        font-size: 25px;
+    }
+    .homeinfo p{
+        font-size: 20px;
+    }
+    .btnsci{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .btn{
+        margin-bottom: 30px;
+    }
+    .devprojects{
+        margin-top: 1rem;
+    }
+    .crproject{
+        margin-top: 1rem;
+    }
+    .aboutme{
+        margin-top: -5rem;
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1032px) {
+    .profileimg{
+        margin-left: 20px;
+    }
+    .devprojects{
+        margin-top: 1rem;
+    }
+    .crproject{
+        margin-top: 1rem;
+    }
+    .aboutme{
+        margin-top: -5rem;
+    }
+}
