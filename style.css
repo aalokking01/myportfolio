@@ -572,5 +572,12 @@ footer{
     color: #0a0a0a;
     box-shadow: 0 0 10px var(--accent);
 }
-
+.sci a,
+.sci a:hover,
+.sci a:focus,
+.sci-footer a,
+.sci-footer a:hover,
+.sci-footer a:focus {
+    text-decoration: none !important;
+}
 
