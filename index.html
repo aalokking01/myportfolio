@@ -8,43 +8,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--link to local css file-->
     <link href="style.css" rel="stylesheet">
-    <link href="mediaquery.css" rel="stylesheet">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <!--Navigation-->
-    <nav class="navbar">
-        <a href="#home1" class="logo">Portfolio</a>
-        <ul class="navlinks"">
-            <li><a href="#home1">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#devprojects"> Dev Projects</a></li>
-            <li><a href="#crproject">Creator Projects</a></li>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#aboutme">Contact Me</a></li>
-        </ul>
-    </nav>
+    ```html
+<nav class="navbar">
+    <a href="#home1" class="logo">Portfolio</a>
+
+    <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="navlinks">
+        <li><a href="#home1">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#devprojects">Dev Projects</a></li>
+        <li><a href="#crproject">Creator Projects</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#aboutme">Contact Me</a></li>
+    </ul>
+</nav>
+```
     <!--home section-->
     <section class="home" id="home1">
         <div class="homeinfo" id="home">
             <h1>Aalok King</h1>
-            <h2>I'm a
+            <h2>I'am a
                 <span style="--i:3;" data-text="Web Developer">Web Developer</span>
                 <span style="--i:2;" data-text="Biker">Biker</span>
                 <span style="--i:1;" data-text="Motovloger">Motovloger</span>
             </h2>
-           <p>From Code to Road — I’m a web developer, biker, and cinematic,<br> crafting digital experiences, chasing adventures, and sharing<br> my journey through stories captured along the way.</p>            <div class="btnsci">
-                <a href="#" class="btn">Contact Me</a>
+            <p>From Code to Road — I’m a web developer, biker, and cinematic, crafting digital experiences, chasing adventures, and sharing my journey through stories captured along the way.</p>
+            <div class="btnsci">
+                <a href="#aboutme" class="btn">Contact Me</a>
                 <div class="sci">
-                    <a href="https://github.com/aalokking01" target="blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/aalokking_01" target="blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="mailto:aalokking.bussiness@gmail.com" target="blank"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.youtube.com/aalokking" target="blank"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
                 </div>
             </div>
         </div>
         <div class="homeimg">
-            <img src="./profileimg.jpg" alt="profile" class="profileimg">
+            <img src="./images/profileimg.jpg" alt="profile" class="profileimg">
         </div>
     </section>
     <!--skill section-->
@@ -83,13 +91,13 @@
                     </div>
                     <div class="devcard">
                     <i class="fa-solid fa-clock"></i>
-                    <h3>Coming Soon</h3>
+                    <h3>Comming Soon</h3>
                     <p>Exciting new projects are coming soon. Stay tuned for what's next!</p>
                     <a class="visitnow" target="_blank" href="#home1">Visit Now</a>
                 </div>
                  <div class="devcard">
                     <i class="fa-solid fa-clock"></i>
-                    <h3>Coming Soon</h3>
+                    <h3>Comming Soon</h3>
                     <p>Exciting new projects are coming soon. Stay tuned for what's next!</p>
                     <a class="visitnow" target="_blank" href="#home1">Visit Now</a>
                 </div>
@@ -103,27 +111,27 @@
             <div class="crgrid">
                 <div class="crgridcard">
                     <h3>Brand Philomex</h3>
-                   <video autoplay controls muted loop playsinline>
-    <source src="./video1.mp4" type="video/mp4">
+                    <video autoplay controls muted loop playsinline>
+    <source src="videos/video1.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DWtjD3PEypF/?srtk=MWZuMm44MGxzMTRzbg==">Visit Now</a>
+                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DWtjD3PEypF/?srtk=MWZuMm44MGxzMTRzbg==">Watch Now</a>
                 </div>
                 <div class="crgridcard">
                     <h3>Brand StarShyne</h3>
                     <video autoplay controls muted loop playsinline>
-    <source src="./video2.mp4" type="video/mp4">
+    <source src="videos/video2.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DW8_u6TTDXo/?cplk=bHc0amJ4cjB3Nndo">Visit Now</a>
+                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DW8_u6TTDXo/?cplk=bHc0amJ4cjB3Nndo">Watch Now</a>
                 </div>
                 <div class="crgridcard">
-                    <h3>Road Fighter Shoes</h3>
+                    <h3>Road Fighter</h3>
                     <video autoplay controls muted loop playsinline>
-    <source src="./video3.mp4" type="video/mp4">
+    <source src="videos/video3.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DVV_PBrk2wt/?srtk=b3UzcWk1ajUyZHc2">Visit Now</a>
+                <a class="visitnow" target="_blank" href="https://www.instagram.com/reel/DVV_PBrk2wt/?srtk=b3UzcWk1ajUyZHc2">Watch Now</a>
                 </div>
 
             </div>
@@ -150,17 +158,17 @@
             </form>
         </div>
         <div class="sci-footer">
-                    <a href="https://github.com/aalokking01" target="blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/aalokking_01" target="blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="mailto:aalokking.bussiness@gmail.com" target="blank"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.youtube.com/aalokking" target="blank"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
                 </div>
     </section>
 
 <!--footer-->
     <footer>
-    <p>&copy;2026 Aalok King. All Rights reserved.</p>
+    <p>&copy;2026 Aalok King. All Rights reseved.</p>
     </footer>
     <!--link to js file-->
     <script src="script.js"></script>
