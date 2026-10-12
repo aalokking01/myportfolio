@@ -1,176 +1,418 @@
-@media (max-width: 480px) {
-    .hamburger{
-        display: block;
-        font-size: 50px;
-        color: white;
-    }
-    .navlinks{
-        display: none;
-    }
-    .profileimg{
-        display: none;
-    }
-    .btnsci{
-        flex-direction: column;
-    }
-    .btn{
-        margin-top: 30px;
-    }
-    .sci{
-        margin-top: 30px;
-    }
-    .home{
-        background: none;
-    }
-    .devprojects{
-        padding: 1rem;
-    }
-    .skills{
-        padding: 1rem;
-    }
-    .crprojects{
-        padding: 1rem;
-    }
-    .aboutme{
-    padding: 1rem;
-    }
-    .contactme{
-        width: 300px;
-        padding: 25px;
-    }
-    .sci-footer{
-        margin-bottom: 2rem;
-    }
+/* RESPONSIVE CSS PATCH
+   Keep your existing desktop/theme styles.
+   1. Delete your old @media blocks.
+   2. Paste this block at the VERY END of style.css.
+*/
 
+/* Fluid sizing and overflow protection */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .navlinks{
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.9rem clamp(1rem, 4vw, 4rem);
+    gap: 1rem;
+}
+
+.logo {
+    padding-left: 0;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.navlinks {
+    gap: clamp(0.8rem, 2vw, 2rem);
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Hero / home */
+.home {
+    min-height: 100svh;
+    height: auto;
+    padding: 110px clamp(1rem, 5vw, 5rem) 3rem;
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.homeinfo,
+.homeimg {
+    min-width: 0;
+}
+
+.homeinfo {
+    flex: 1 1 500px;
+}
+
+.home h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+}
+
+.home h2 {
+    font-size: clamp(1.25rem, 2.7vw, 2rem);
+}
+
+.home p {
+    display: block;
+    max-width: 60ch;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.homeimg {
+    flex: 1 1 300px;
+    overflow: visible;
+}
+
+.profileimg {
+    display: block;
+    width: min(100%, 400px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-left: 0;
+    margin-inline: auto;
+    object-fit: cover;
+}
+
+.btnsci {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-size: 1rem;
+    white-space: normal;
+}
+
+.sci {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: 0;
+}
+
+.sci a,
+.sci-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sections and responsive card grids */
+.skills,
+.devprojects,
+.crproject,
+.aboutme,
+.contact {
+    padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 5vw, 5rem);
+}
+
+.skill-grid,
+.devprojectsgrid,
+.crgrid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.skillcard,
+.devcard,
+.crgridcard {
+    min-width: 0;
+    padding: clamp(1rem, 3vw, 2rem);
+    overflow-wrap: anywhere;
+}
+
+.skillcard h3,
+.devcard h3,
+.crgridcard h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.crgridcard video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+.aboutme p {
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+    overflow-wrap: anywhere;
+}
+
+.aboutme b {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+/* Contact form */
+.contactform {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contactme {
+    width: min(100%, 350px);
+    min-width: 0;
+    min-height: 44px;
+    height: auto;
+    padding: 0.8rem 1rem;
+    font: inherit;
+    color: #222;
+}
+
+.contactform textarea.contactme {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit-box {
+    flex-basis: 100%;
+}
+
+.contact button {
+    margin-top: 1rem;
+    min-height: 44px;
+    padding: 0.65rem 1.4rem;
+    font-size: 1rem;
+}
+
+.sci-footer {
+    margin: 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.sci-footer a {
+    margin-right: 0;
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .home {
+        gap: 2rem;
+        padding-inline: 4%;
+    }
+
+    .profileimg {
+        width: min(100%, 340px);
+    }
+
+    .skill-grid,
+    .devprojectsgrid,
+    .crgrid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    }
+}
+
+/* Phones and portrait tablets: stacked hero + mobile navigation */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navlinks {
         display: none;
     }
-    .hamburger{
+
+    .hamburger {
         display: block;
-        font-size: 50px;
-        color: white;
+        font-size: 2rem;
     }
-    .profileimg{
-        margin-left: 30px;
-        width: 400px;
-        height: 400px;
-    }
-    .homeinfo h1{
-        font-size: 75px;
-    }
-    .skill-grid{
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    }
-    .skillcard{
-    text-align: center;
-    }
-    .skills h3{
-        font-size: 40px;
-    }
-    .skills p{
-        font-size: 30px;
-    }
-    .btnsci{
-        margin-top: 30px;
-    }
-    .devprojectsgrid{
-        grid-template-columns: repeat(auto-fit, minmax(356px, 1fr));
-    }
-    .crgridcard video{
-        height: 450px;
-    }
-    .devcard{
-        text-align: center;
-    }
-    .devcard h3{
-        font-size: 40px;
-    }
-    .devcard p{
-        font-size: 30px;
-    }
-    .devprojects{
-        padding: 1rem;
-    }
-    .home{
+
+    .home {
+        min-height: auto;
+        height: auto;
         flex-direction: column-reverse;
-        margin-top: 2rem;
         justify-content: center;
-        gap: 10px;
-        background: radial-gradient(circle at 50% 35%, var(--accent-glow) 20%, transparent 25%);
-
-    }
-    .homeinfo p{
-        font-size: 23px;
-    }
-    .homeimg{
-        flex: none;
-    }
-    .crgrid{
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-    .aboutme p{
-        font-size: 30px;
-        max-width: 500px;
-    
-    }
-    .crproject h2{
-        font-size: 40px;
-    }
-    .devprojects h2{
-        font-size: 40px;
-    }
-    .skills h2{
-        font-size: 40px;
-    }
-    .aboutme b{
-        font-size: 40px;
-    }
-
-    .aboutme{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
+        padding: 105px 1rem 3rem;
+        gap: 1.5rem;
+        background: radial-gradient(
+            circle at 50% 20%,
+            var(--accent-glow) 0%,
+            transparent 45%
+        );
+    }
+
+    .homeinfo,
+    .homeimg {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .home h1 {
+        font-size: clamp(2rem, 8vw, 3.3rem);
+    }
+
+    .home h2 {
+        font-size: clamp(1.1rem, 4.5vw, 1.7rem);
+        margin-top: 0;
+    }
+
+    .home p {
+        margin-inline: auto;
+        font-size: 1rem;
+    }
+
+    .profileimg {
+        display: block;
+        width: min(65vw, 270px);
+        height: auto;
+        margin-inline: auto;
+    }
+
+    .btnsci {
+        justify-content: center;
+        margin-top: 1.25rem;
+        gap: 1rem;
+    }
+
+    .btn {
+        margin-top: 0;
+    }
+
+    .sci {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .skills,
+    .devprojects,
+    .crproject,
+    .aboutme,
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .skills h2,
+    .devprojects h2,
+    .crproject h2,
+    .aboutme h2,
+    .contact h2 {
+        margin-top: 0.5rem;
+        padding-inline: 0;
+        font-size: clamp(1.35rem, 5vw, 1.8rem);
+        overflow-wrap: anywhere;
+    }
+
+    .skill-grid,
+    .devprojectsgrid,
+    .crgrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .skillcard,
+    .devcard,
+    .crgridcard {
+        padding: 1.25rem;
+        text-align: center;
+    }
+
+    .aboutme {
+        text-align: center;
+    }
+
+    .aboutme p {
+        font-size: 1rem;
+    }
+
+    .crgridcard video {
+        max-height: 520px;
+    }
+
+    .contactform {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contactme {
+        width: 100%;
+        max-width: none;
+    }
+
+    .submit-box {
+        width: 100%;
+    }
+
+    .contact button {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        font-size: 1.7rem;
+    }
+
+    .home h1 {
+        font-size: 1.9rem;
+    }
+
+    .profileimg {
+        width: min(70vw, 220px);
+    }
+
+    .skillcard,
+    .devcard,
+    .crgridcard {
         padding: 1rem;
     }
-    .contactform{
-        display: flex;
-        flex-direction: column;
-    }
-    .contactme{
-        width: 500px;
-        font-size: 30px;
-        height: 70px;
-    }
-    .contactform button{
-        font-size: 40px;
-        margin-top: 20px;
-    }
-    .contact h2{
-        font-size: 40px;
-    }
-    .sci-footer{
-        margin-bottom: 2rem;
-    }
-    .visitnow{
-        font-size: 25px;margin-top: 25px;
-    }
-    .crgrid h3{
-        font-size: 40px;
-    }
-
 }
 
-@media (min-width: 786px) and (max-width: 1024px) {
-    
-}
+/* Wide desktop screens */
+@media (min-width: 1281px) {
+    .home {
+        padding-inline: max(5rem, calc((100vw - 1400px) / 2));
+    }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-    
-}
-@media (min-width: 1281) {
-    
+    .skills,
+    .devprojects,
+    .crproject,
+    .aboutme,
+    .contact {
+        padding-inline: max(5rem, calc((100vw - 1400px) / 2));
+    }
 }
