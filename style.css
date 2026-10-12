@@ -30,7 +30,7 @@ body{
     background-color: var(--dark-bg);
     color: var(--text);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* Navigation */
 
@@ -65,6 +65,10 @@ body{
     list-style: none;
 }
 
+.hamburger{
+    display: none;
+}
+
 .navlinks a {
     color: var(--text);
     text-decoration: none;
@@ -96,7 +100,7 @@ body{
     height: 100vh;
     background: radial-gradient(circle at 74% 50%, var(--accent-glow) 0%, transparent 25%);
     padding: 50px 9% 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: white;
 }
 
@@ -163,6 +167,8 @@ body{
     font-weight: <weight>;
     font-style: normal;
     display: flex;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
 .btnsci{
@@ -220,7 +226,7 @@ body{
     flex: 1;
     overflow: var(--accent);
     position: relative;
-    margin-left: 200px;
+
     
 }
 
@@ -228,6 +234,7 @@ body{
     width: 400px;
     height: 400px;
     border-radius: 50%;
+    margin-left: 200px;
     object-fit: cover;
     border: 3px solid var(--accent);
     box-shadow: 0 0 5px var(--accent);;
@@ -250,6 +257,7 @@ body{
 .skills{
     padding: 5rem 5%;
     background: var(--darker-bg);
+   
 }
 
 .skill-grid{
@@ -309,11 +317,11 @@ footer{
     text-align: center;
     background: var(--darker-bg);
     padding: .5rem 5%;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 /*dev project secton*/
 .devprojects{
-    padding: 5rem ;
+    padding: 5rem 5% ;
     background: var(--darker-bg);
 }
 
@@ -391,7 +399,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
 /*creator projects section*/
 
 .crproject{
-    padding: 5rem ;
+    padding: 5rem 5% ;
     background: var(--darker-bg);
 }
 
@@ -450,7 +458,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .aboutme{
-    padding: 5rem ;
+    padding: 5rem 5% ;
     background: var(--darker-bg);   
 }
 .aboutme h2{
@@ -481,7 +489,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
 /* contact form css*/
 
 .contact button{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: inline-block;
     padding: 5px 20px;
     background: transparent;
@@ -507,9 +515,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
     color:  black;
     box-shadow: 0 0 5px var(--accent);
 }
-.contact{
-    text-align: center;
-}
+
 .contactform{
     display: flex;
     flex-wrap: wrap;
@@ -530,11 +536,11 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(36, 17, 17, 0.1);
     backdrop-filter: blur(5px);
     width: 250px;
-    height: 40px;
+    height: 30px;
     border: none;
     outline: none;
     padding-left: 20px;
-    border-radius: 50px;
+    border-radius: 50px; 
     font-weight: 500;
     columns: #666;
 }
@@ -566,3 +572,5 @@ border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #0a0a0a;
     box-shadow: 0 0 10px var(--accent);
 }
+
+
