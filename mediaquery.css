@@ -416,3 +416,54 @@ section {
         padding-inline: max(5rem, calc((100vw - 1400px) / 2));
     }
 }
+
+
+
+/* Hamburger menu */
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--accent);
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        background: #0a0a0a;
+        border-bottom: 1px solid var(--accent);
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        z-index: 1001;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+}
