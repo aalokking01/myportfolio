@@ -32,3 +32,19 @@ contactForm.addEventListener("submit", async function (e) {
         submitButton.textContent = "Submit";
     }
 });
+
+
+const hamburger = document.querySelector(".hamburger");
+const navlinks = document.querySelector(".navlinks");
+
+if (hamburger && navlinks) {
+    hamburger.addEventListener("click", () => {
+        navlinks.classList.toggle("active");
+    });
+
+    navlinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navlinks.classList.remove("active");
+        });
+    });
+}
