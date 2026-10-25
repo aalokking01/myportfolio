@@ -33,7 +33,9 @@ body{
     overflow-y: auto;
 }
 /* Navigation */
-
+#clearbg{
+    color: var(--accent);
+}
 .navbar{
     position: fixed;
     top: 0;
